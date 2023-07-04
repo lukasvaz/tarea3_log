@@ -28,6 +28,21 @@ class Hashing:
 
         return obtener_primo_mayor(self.m)
     
+    def primo(self):
+
+        def es_primo(numero):
+            if numero < 2:
+                return False
+            for i in range(2, int(numero ** 0.5) + 1):
+                if numero % i == 0:
+                    return False
+            return True
+        
+        primo = self.m +1
+        while not es_primo(primo):
+            primo += 1
+            return primo
+    
     def hash(self, word : str):
         # Se crean nuevos valores en a si el largo de word es mayor a los elementos en a
         for i in range(0, len(word) - len(self.a) ):
@@ -44,3 +59,5 @@ class Hashing:
     # Printea los valores guardados en el hashing
     def print(self):
         print(self.m, self.P, self.a, self.b)
+
+
