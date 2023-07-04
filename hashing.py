@@ -11,14 +11,22 @@ class Hashing:
 
     # Retorna el proximo numero primo mayor a n
     def primo(self):
-        archivo = open("primos.txt", "r")
-        lineas = archivo.readlines()
-        archivo.close()
 
-        for linea in lineas:
-            if ( int(linea) > self.m ):
-                return int(linea)
-        return None 
+        def es_primo(numero):
+            if numero < 2:
+                return False
+            for i in range(2, int(numero ** 0.5) + 1):
+                if numero % i == 0:
+                    return False
+            return True
+
+        def obtener_primo_mayor(valor):
+            primo = valor + 1
+            while not es_primo(primo):
+                primo += 1
+            return primo
+
+        return obtener_primo_mayor(self.m)
     
     def hash(self, word : str):
         # Se crean nuevos valores en a si el largo de word es mayor a los elementos en a
