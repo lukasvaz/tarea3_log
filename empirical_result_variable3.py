@@ -9,9 +9,9 @@ import time
 print("Pruebas insertarndo 93890 elementos y luego buscando 100 que no estan en la tabla")
 print("Valores de k y resultados de falsos positivos:")
 arr = []
-m= 585425
+m= 400000
 print(f"M={m}")
-k=4
+k=3
 cantN= 50
 #res=0
 i=0
@@ -20,9 +20,11 @@ babies_file = csv.reader(open('data/Popular-Baby-Names-Final.csv', "r"), delimit
 films_file = csv.reader(open('data/Film-Names.csv', "r", encoding="utf8"), delimiter=",")
 
 for row in babies_file:
+    if babies_file.line_num==1:continue
+    print(row)
     while i < cantN:
+        
         moneda= random.randint(0,1)
-        if babies_file.line_num==1:continue
 
         if(moneda == 1):
             arr.append(row)
