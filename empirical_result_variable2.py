@@ -2,7 +2,7 @@ from bloom_filter import BloomFilter
 from hashing import Hashing
 import random
 import csv
-import pandas as pd
+#import pandas as pd
 
 
 print("Pruebas insertarndo 1000 elementos y luego buscando 1000 que no estan en la tabla")
