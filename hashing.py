@@ -11,25 +11,6 @@ class Hashing:
 
     # Retorna el proximo numero primo mayor a n
     def primo(self):
-
-        def es_primo(numero):
-            if numero < 2:
-                return False
-            for i in range(2, int(numero ** 0.5) + 1):
-                if numero % i == 0:
-                    return False
-            return True
-
-        def obtener_primo_mayor(valor):
-            primo = valor + 1
-            while not es_primo(primo):
-                primo += 1
-            return primo
-
-        return obtener_primo_mayor(self.m)
-    
-    def primo(self):
-
         def es_primo(numero):
             if numero < 2:
                 return False
@@ -41,7 +22,7 @@ class Hashing:
         primo = self.m +1
         while not es_primo(primo):
             primo += 1
-            return primo
+        return primo
     
     def hash(self, word : str):
         # Se crean nuevos valores en a si el largo de word es mayor a los elementos en a
@@ -51,10 +32,14 @@ class Hashing:
         # Se calcula la sumatoria de cada letra en x multiplicado por el valor en a correspondiente
         c = 0
         for i in range(0, len(word)):
-            c += ((ord(word[i]) - 96) * self.a[i])
+            c += ((ord(word[i]) - 65) * self.a[i])
 
         # Se retorna el valor al aplicarle el hash
         return (((self.b + c) % self.P) % self.m )
+
+    # Retorna los valores del hashing
+    def get(self):
+        return(self.m, self.P, self.a, self.b)
 
     # Printea los valores guardados en el hashing
     def print(self):
