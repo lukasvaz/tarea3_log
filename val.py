@@ -1,3 +1,4 @@
+# https://hur.st/bloomfilter/?n=93000&p=0.1&m=&k=
 import math
 
 def opt_m(n,p,k):

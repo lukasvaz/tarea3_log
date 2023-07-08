@@ -2,19 +2,19 @@ from bloom_filter import BloomFilter
 from hashing import Hashing
 import random
 import csv
-#import pandas as pd
+import pandas as pd
 
-
+# Se limito el tamaño maximo de k
 print("Pruebas insertarndo 1000 elementos y luego buscando 1000 que no estan en la tabla")
 print("Valores de k y resultados de falsos positivos:")
 for j in range(10,21):
     m = 2**j
     print(f"M = { m }")
     valores_k = []
-    resultados = []         
-    for i in range(0,10):
-        k = m//(2**(10-i))
-
+    resultados = []
+    k = 1
+    while k < m//64:
+        k*=2
         babies_file = csv.reader(open('data/Popular-Baby-Names-Final.csv', "r"), delimiter=",")
         films_file = csv.reader(open('data/Film-Names.csv', "r", encoding="utf8"), delimiter=",")
         filter=BloomFilter(m,[Hashing(m).hash for j in range(0,k)])

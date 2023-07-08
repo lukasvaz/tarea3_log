@@ -5,12 +5,12 @@ import csv
 import pandas as pd
 import numpy as np 
 
-m = 800000 #fijamos m
+m =891411 #fijamos m
 N=100000 #size tabla  nombres
+search_size=500
 print("Pruebas encontrando  un k optimo para cierto M fijo")
-search_size=1000
 resultados=[]
-for k in range(1,20):
+for k in range(1,30):
     # print(f"k = { k }")
     false_positive=0
     filter=BloomFilter(m,[Hashing(m).hash for j in range(0,k)])
