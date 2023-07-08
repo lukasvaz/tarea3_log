@@ -1,0 +1,81 @@
+===============================================
+- EXPERIMENTO UTILIZANDO CALCULADORA BLOOM -
+
+Elementos a insertar: 93000
+Elementos a buscar: 1000
+Probabilidad: 0.1
+Valor de m: 445705 valor de k: 3
+----------------------------------------------
+Intento: 1
+Insertando ->
+Buscando ->
+falsos positivos: 106
+Probabilidad: 0.106
+----------------------------------------------
+Intento: 2
+Insertando ->
+Buscando ->
+falsos positivos: 109
+Probabilidad: 0.109
+----------------------------------------------
+Intento: 3
+Insertando ->
+Buscando ->
+falsos positivos: 113
+Probabilidad: 0.113
+----------------------------------------------
+Intento: 4
+Insertando ->
+Buscando ->
+falsos positivos: 104
+Probabilidad: 0.104
+----------------------------------------------
+Intento: 5
+Insertando ->
+Buscando ->
+falsos positivos: 103
+Probabilidad: 0.103
+----------------------------------------------
+Promedio de probabilidad: 0.10700000000000001
+===============================================
+
+===============================================
+- EXPERIMENTO UTILIZANDO CALCULADORA BLOOM -
+
+Elementos a insertar: 93000
+Elementos a buscar: 1000
+Probabilidad: 0.01
+Valor de m: 891410 valor de k: 6
+----------------------------------------------
+Intento: 1
+Insertando ->
+Buscando ->
+falsos positivos: 35
+Probabilidad: 0.035
+----------------------------------------------
+Intento: 2
+Insertando ->
+Buscando ->
+falsos positivos: 33
+Probabilidad: 0.033
+----------------------------------------------
+Intento: 3
+Insertando ->
+Buscando ->
+falsos positivos: 31
+Probabilidad: 0.031
+----------------------------------------------
+Intento: 4
+Insertando ->
+Buscando ->
+falsos positivos: 28
+Probabilidad: 0.028
+----------------------------------------------
+Intento: 5
+Insertando ->
+Buscando ->
+falsos positivos: 34
+Probabilidad: 0.034
+----------------------------------------------
+Promedio de probabilidad: 0.0322
+===============================================

@@ -16,10 +16,9 @@ Experimento 1 (Exploración):
 ejecución: python experimento1.py
 
 Experimento 2 (Comparacion m y k teoricos):
-Para obtener los valores teóricos se hace uso del siguiente recurso: 
-https://hur.st/bloomfilter/
 
-ejecución:
+ejecución (para calculos teoricos): python experimento2_teoria.py
+ejecución (para calculos empiricos): python experimento2_empirico.py
 
 Eperimento 3 (Estimación de k):Para obtener los valores teóricos se hace uso del siguiente recurso: 
 https://hur.st/bloomfilter/
